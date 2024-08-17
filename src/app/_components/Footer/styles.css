@@ -1,0 +1,15 @@
+footer section {
+  @apply flex flex-col;
+}
+
+footer h3 {
+  @apply text-base font-bold my-4 text-slate-900;
+}
+
+footer p {
+  @apply text-sm my-2 text-slate-800;
+}
+
+footer section a {
+  @apply text-sm py-2 text-slate-800 p-0;
+}

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply flex flex-col container mx-auto relative;
+}
+
+.explode-width-footer {
+  box-shadow: 0 0 0 100vmax #e7e3c6;
+  clip-path: inset(0 -100vmax);
+}
+
+.center {
+  @apply flex justify-center items-center w-full;
+}
