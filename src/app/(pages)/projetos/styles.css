@@ -1,0 +1,9 @@
+.cardGallery {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

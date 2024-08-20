@@ -1,5 +1,6 @@
 "use client";
 
+import CardProject from "@components/CardProject";
 import { ImoveisContext } from "_context/ImoveisContext";
 import {
   PreferencesContext,
@@ -7,6 +8,7 @@ import {
 } from "_context/PreferencesContext";
 import Imovel from "_models/Imoveis";
 import { useContext, useEffect, useState } from "react";
+import "./styles.css";
 
 function Projetos() {
   const { imoveis } = useContext(ImoveisContext);
@@ -61,15 +63,12 @@ function Projetos() {
   }, [preferences]);
 
   return (
-    <div className="center container flex flex-wrap">
-      {filteredImoveis.map((imovel, index) => (
-        <div key={index} className="p-4">
-          <h2>{imovel.nome}</h2>
-          <p>{imovel.bairro}</p>
-          <p>{imovel["planta.dorms"]}</p>
-          <p>{imovel["planta.preco"]}</p>
-        </div>
-      ))}
+    <div className="center container w-full p-4">
+      <div className="cardGallery">
+        {filteredImoveis.map((imovel, index) => (
+          <CardProject key={index} imovel={imovel}></CardProject>
+        ))}
+      </div>
     </div>
   );
 }
