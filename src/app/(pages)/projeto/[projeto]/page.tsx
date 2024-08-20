@@ -1,8 +1,6 @@
-import { ImoveisContext } from "_context/ImoveisContext";
 import Imovel from "_models/Imoveis";
 import { flattenObject } from "_utils/flatten";
 import formatQuery from "_utils/formatQuery";
-import { useContext } from "react";
 
 export default async function Page({
   params,
@@ -23,8 +21,8 @@ export default async function Page({
   );
   return (
     <div className="flex flex-col lg:flex-row container w-full pt-10">
-      <img src={imovel?.fachada} alt="" />
-      <div className="flex flex-col p-8 gap-2 h-full items-start justify-start w-full">
+      <img src={imovel?.fachada} alt={imovel?.nome} className="flex w-1/2" />
+      <div className="flex flex-col p-8 gap-2 h-full items-start justify-start w-1/2">
         <h1 className="capitalize text-3xl mb-2">Projeto {imovel?.nome}</h1>
         <p>
           Endereço: {imovel?.rua}, {imovel?.num}
@@ -41,12 +39,4 @@ export default async function Page({
       </div>
     </div>
   );
-}
-
-export function useGenerateStaticParams() {
-  const { imoveis } = useContext(ImoveisContext);
-
-  return imoveis.map((imovel) => ({
-    slug: formatQuery(imovel.nome),
-  }));
 }
