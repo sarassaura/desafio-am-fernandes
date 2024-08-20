@@ -30,7 +30,7 @@ function Projetos() {
         imovel["planta.metragem"] >= preferences["planta.metragem"];
       const matchesPreco =
         preferences["planta.preco"] === undefined ||
-        imovel["planta.preco"] <= preferences["planta.preco"];
+        imovel["planta.preco"] <= preferences["planta.preco"] * 1000;
       const matchesVagas =
         preferences["planta.vagas"] === undefined ||
         imovel["planta.vagas"] === preferences["planta.vagas"];
