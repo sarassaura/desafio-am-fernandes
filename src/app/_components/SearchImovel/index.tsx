@@ -42,7 +42,7 @@ function SearchImovel() {
           onChange={(e) => changePreferences(e)}
           value={preferences.bairro}
         >
-          <option>Bairro</option>
+          <option value={undefined}>Bairro</option>
           {getNeighborhoodByFrequency(imoveis)?.map((bairro, index) => {
             return (
               <option key={index} value={bairro}>
@@ -58,7 +58,7 @@ function SearchImovel() {
           onChange={(e) => changePreferences(e)}
           value={preferences["planta.dorms"]}
         >
-          <option>Dormitórios</option>
+          <option value={undefined}>Dormitórios</option>
           {getDormitories(imoveis)?.map((dormitory, index) => {
             return (
               <option key={index} value={dormitory}>
@@ -74,7 +74,7 @@ function SearchImovel() {
           onChange={(e) => changePreferences(e)}
           value={preferences["planta.preco"]}
         >
-          <option>Valor total até</option>
+          <option value={undefined}>Valor total até</option>
           {prices.map((price, index) => (
             <option key={index} value={price}>
               R$ {price < 1000 ? "  " : ""}

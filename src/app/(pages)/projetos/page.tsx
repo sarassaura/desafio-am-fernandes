@@ -20,17 +20,21 @@ function Projetos() {
   ): Imovel[] {
     return imoveis.filter((imovel) => {
       const matchesBairro =
-        !preferences.bairro || imovel.bairro === preferences.bairro;
+        !preferences.bairro ||
+        imovel.bairro === preferences.bairro ||
+        preferences.bairro === "Bairro";
       const matchesRua = !preferences.rua || imovel.rua === preferences.rua;
       const matchesDorms =
         preferences["planta.dorms"] === undefined ||
-        imovel["planta.dorms"] === preferences["planta.dorms"];
+        imovel["planta.dorms"] === preferences["planta.dorms"] ||
+        Number.isNaN(preferences["planta.dorms"]);
       const matchesMetragem =
         preferences["planta.metragem"] === undefined ||
         imovel["planta.metragem"] >= preferences["planta.metragem"];
       const matchesPreco =
         preferences["planta.preco"] === undefined ||
-        imovel["planta.preco"] <= preferences["planta.preco"] * 1000;
+        imovel["planta.preco"] <= preferences["planta.preco"] * 1000 ||
+        Number.isNaN(preferences["planta.preco"]);
       const matchesVagas =
         preferences["planta.vagas"] === undefined ||
         imovel["planta.vagas"] === preferences["planta.vagas"];
