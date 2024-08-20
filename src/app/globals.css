@@ -8,11 +8,22 @@ body {
 }
 
 body {
-  @apply flex flex-col container mx-auto relative;
+  @apply flex flex-col relative;
+}
+
+footer,
+nav,
+body > main > div:not(.full-width) {
+  @apply container mx-auto;
 }
 
 .explode-width-footer {
   box-shadow: 0 0 0 100vmax #e7e3c6;
+  clip-path: inset(0 -100vmax);
+}
+
+.explode-width-navbar {
+  box-shadow: 0 0 0 100vmax #fff;
   clip-path: inset(0 -100vmax);
 }
 

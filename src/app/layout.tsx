@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@components/Navbar";
 import Footer from "@components/Footer";
+import { PreferencesContextProvider } from "_context/PreferencesContext";
+import { ImoveisProvider } from "_context/ImoveisContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,9 +29,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <NavBar />
-        <main className="flex flex-grow w-full pb-10">{children}</main>
-        <Footer />
+        <PreferencesContextProvider>
+          <ImoveisProvider>
+            <NavBar />
+            <main className="flex flex-grow w-full pb-10">{children}</main>
+            <Footer />
+          </ImoveisProvider>
+        </PreferencesContextProvider>
       </body>
     </html>
   );

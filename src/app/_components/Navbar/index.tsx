@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function NavBar() {
   return (
-    <nav className="flex items-center h-20 sticky top-0 z-50 bg-white">
+    <nav className="flex items-center h-20 sticky top-0 z-50 bg-white explode-width-navbar">
       <ul className="flex items-center w-full h-full p-4 text-accent text-md font-medium">
         <li>
           <Link href="/" className="font-bold text-xl m-0 p-0">
