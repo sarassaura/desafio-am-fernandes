@@ -56,8 +56,6 @@ function Projetos() {
     setFilteredImoveis((imoveis) => {
       const filtered = filterImoveis(imoveis, preferences);
 
-      console.log(filtered);
-
       return filtered;
     });
   }, [preferences]);

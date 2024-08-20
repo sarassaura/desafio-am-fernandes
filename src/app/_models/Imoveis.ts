@@ -3,8 +3,8 @@ interface Imovel {
   cep: string;
   cidade: string;
   fachada: string;
-  "localtion._lat": number;
-  "localtion._long": number;
+  "location._lat": number;
+  "location._long": number;
   nome: string;
   num: string;
   rua: string;

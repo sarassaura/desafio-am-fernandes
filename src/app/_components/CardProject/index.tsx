@@ -1,4 +1,5 @@
 import Imovel from "_models/Imoveis";
+import formatQuery from "_utils/formatQuery";
 import Link from "next/link";
 
 function CardProject({ key, imovel }: { key: number; imovel: Imovel }) {
@@ -18,7 +19,7 @@ function CardProject({ key, imovel }: { key: number; imovel: Imovel }) {
         <p>Dormitórios: {imovel["planta.dorms"]}</p>
         <p>R$ {imovel["planta.preco"]},00</p>
         <Link
-          href={`/project/${imovel.nome}`}
+          href={`/projeto/${formatQuery(imovel.nome)}`}
           className="bg-accent text-white rounded-xl p-2 px-8 w-32 flex justify-center self-center"
         >
           Buscar
