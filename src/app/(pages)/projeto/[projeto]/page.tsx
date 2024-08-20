@@ -21,8 +21,8 @@ export default async function Page({
   );
   return (
     <div className="flex flex-col lg:flex-row container w-full pt-10">
-      <img src={imovel?.fachada} alt={imovel?.nome} className="flex w-1/2" />
-      <div className="flex flex-col p-8 gap-2 h-full items-start justify-start w-1/2">
+      <img src={imovel?.fachada} alt={imovel?.nome} className="flex lg:w-1/2" />
+      <div className="flex flex-col p-8 gap-2 h-full items-start justify-start lg:w-1/2">
         <h1 className="capitalize text-3xl mb-2">Projeto {imovel?.nome}</h1>
         <p>
           Endereço: {imovel?.rua}, {imovel?.num}
