@@ -1,3 +1,7 @@
 a {
   @apply py-4 px-4 whitespace-nowrap hover:brightness-150;
 }
+
+.open {
+  @apply !translate-x-0;
+}

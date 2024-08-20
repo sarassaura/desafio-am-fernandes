@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import "./styles.css";
 
-function BurguerMenu() {
-  const [open, setOpen] = useState(false);
-
+function BurguerMenu({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
     <button
       type="button"

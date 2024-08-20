@@ -30,7 +30,7 @@ function SearchImovel() {
   }
 
   return (
-    <div className="absolute flex flex-col justify-center items-center z-40 w-full h-full">
+    <div className="absolute flex flex-col justify-center items-center z-30 w-full h-full">
       <h1 className="text-white text-xl sm:text-2xl md:text-3xl m-6 font-bold">
         Projetos que inspiram confiança
       </h1>
