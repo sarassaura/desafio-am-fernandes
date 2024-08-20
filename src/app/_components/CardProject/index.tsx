@@ -13,7 +13,7 @@ function CardProject({ key, imovel }: { key: number; imovel: Imovel }) {
         className="w-full h-56 object-cover rounded-xl"
       />
       <div className="card-content p-5 flex flex-col gap-2">
-        <h2 className="text-2xl pb-2">{imovel.nome}</h2>
+        <h2 className="text-xl pb-2">{imovel.nome}</h2>
         <p>Bairro: {imovel.bairro}</p>
         <p>Dormitórios: {imovel["planta.dorms"]}</p>
         <p>R$ {imovel["planta.preco"]},00</p>

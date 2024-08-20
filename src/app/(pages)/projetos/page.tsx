@@ -64,7 +64,7 @@ function Projetos() {
 
   return (
     <div className="center container w-full p-4">
-      <div className="cardGallery">
+      <div className="cardGallery justify-items-center">
         {filteredImoveis.map((imovel, index) => (
           <CardProject key={index} imovel={imovel}></CardProject>
         ))}
